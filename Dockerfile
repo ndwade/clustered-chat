@@ -27,8 +27,15 @@ RUN \
   sbt sbtVersion
 
 # Define working directory
-RUN mkdir /app
+RUN mkdir -p /app/project/target
 WORKDIR /app
+
+ADD *.sbt /app
+ADD project/*.sbt /app/project
+ADD project/*.properties /app/project
+
+RUN sbt clean update
+
 ADD . /app
 
 RUN sbt compile
