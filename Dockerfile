@@ -7,8 +7,9 @@
 # Pull base image
 FROM java:8
 
+# NOTE: Keep these in sync with the actual sbt config, or you'll have painful build times!
 ENV SCALA_VERSION 2.11.8
-ENV SBT_VERSION 0.13.12
+ENV SBT_VERSION 0.13.11
 
 # Install Scala
 ## Piping curl directly in tar
