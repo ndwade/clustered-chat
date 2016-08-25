@@ -9,3 +9,6 @@ https://github.com/tmlbl/akka-docker-cluster
 https://qnalist.com/questions/6180556/play-framework-how-to-deploy-to-docker
 https://github.com/Ingensi/docker-play-framework/blob/master/Dockerfile
 https://joshpadnick.com/2015/11/11/play-framework-docker-circleci-aws-ec2-container-service/
+https://velvia.github.io/Docker-Scala-Sbt/
+http://www.lightbend.com/activator/template/clustered-chat
+  https://github.com/JAVEO/clustered-chat#master
