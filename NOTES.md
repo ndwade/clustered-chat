@@ -1,2 +1,11 @@
 https://github.com/stefanprodan/aspnetcore-dockerswarm/wiki/RethinkDB-Swarm
 http://www.johnzaccone.io/3-node-cluster-in-30-seconds/
+http://blog.jaceklaskowski.pl/2015/07/24/docker-your-scala-web-application-play-framework.html
+http://blog.michaelhamrah.com/2014/06/akka-clustering-with-sbt-docker-and-sbt-native-packager/
+https://github.com/marcuslonnberg/sbt-docker
+https://github.com/mhamrah/akka-docker-cluster-example
+  https://github.com/mhamrah/akka-docker-cluster-example/blob/master/src/main/resources/reference.conf
+https://github.com/tmlbl/akka-docker-cluster
+https://qnalist.com/questions/6180556/play-framework-how-to-deploy-to-docker
+https://github.com/Ingensi/docker-play-framework/blob/master/Dockerfile
+https://joshpadnick.com/2015/11/11/play-framework-docker-circleci-aws-ec2-container-service/
