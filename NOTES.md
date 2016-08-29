@@ -12,3 +12,4 @@ https://joshpadnick.com/2015/11/11/play-framework-docker-circleci-aws-ec2-contai
 https://velvia.github.io/Docker-Scala-Sbt/
 http://www.lightbend.com/activator/template/clustered-chat
   https://github.com/JAVEO/clustered-chat#master
+http://doc.akka.io/docs/akka/2.4.9/scala/remoting.html#Akka_behind_NAT_or_in_a_Docker_container
