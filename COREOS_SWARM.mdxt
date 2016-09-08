@@ -1,0 +1,45 @@
+PV  ami-e3224df4
+HVM ami-c7214ed0 <-- For T2
+
+Determine if a node is the etcd leader:
+  [[ $(etcdctl member list | grep isLeader=true | grep $COREOS_PRIVATE_IPV4 | wc -l) == 1 ]]
+
+Next Steps:
+
+* Bash script to spin up a cluster
+* Bash script to add nodes to an existing cluster
+* Some sort of automation of Swarm-ifying things, including etcd as backend
+* Automation around cluster operations
+    * Add node -- Need to consider Swarm worker vs. manager, and etcd member vs. proxy
+    * Gracefully remove node(s)
+    * Remove dead/failed node
+        * What about re-scheduling of jobs?
+        * What about promoting Swarm worker to leader?
+        * What about converting etcd proxy node to member?
+* Lock down security group(s)
+    * `sudo netstat -tulp | grep -E 'docker|etcd|swarm'`
+* TLS for Swarm and Etcd
+* Get Akka cluster running
+
+docker swarm join-token manager
+docker swarm join-token worker
+
+https://docs.docker.com/swarm/install-manual/
+https://docs.docker.com/swarm/discovery/
+
+
+
+Manager:
+  2375/tcp -- Docker Engine CLI
+  3375/tcp -- Docker Engine Swarm CLI
+Service Discovery:
+  <etcd/consul/whatever>
+Swarm Nodes:
+  2375/tcp -- Docker Engine CLI
+Custom, cross-host container networks:
+  7946/tcp -- Discovery of container networks
+  7946/udp -- Discovery of container networks
+  <Network key-value store service port>
+  4789/udp -- Container overlay network
+
+"If your Swarm cluster is configured for TLS, replace 2375 with 2376, and 3375 with 3376."
