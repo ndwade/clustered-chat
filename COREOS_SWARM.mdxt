@@ -7,12 +7,16 @@ Determine if a node is the etcd leader:
 Next Steps:
 
 * Bash script to spin up a cluster
+    * https://coreos.com/etcd/docs/2.3.7/clustering.html#lifetime-of-a-discovery-url
+    * Note that we want Swarm backed by Etcd:
+        * http://blog.scottlowe.org/2015/04/19/running-etcd-backed-docker-swarm-cluster/
 * Bash script to add nodes to an existing cluster
 * Some sort of automation of Swarm-ifying things, including etcd as backend
 * Automation around cluster operations
     * Add node -- Need to consider Swarm worker vs. manager, and etcd member vs. proxy
     * Gracefully remove node(s)
     * Remove dead/failed node
+        * https://coreos.com/etcd/docs/latest/etcd-live-cluster-reconfiguration.html
         * What about re-scheduling of jobs?
         * What about promoting Swarm worker to leader?
         * What about converting etcd proxy node to member?
